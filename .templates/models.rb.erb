@@ -1,0 +1,16 @@
+require 'dm-validations'
+require 'dm-timestamps'
+require 'dm-serializer'
+
+module <%= app %> 
+	module Models
+		class <%= name %>
+			include DataMapper::Resource
+
+			property :id, 				Serial
+			property :updated_on,		DateTime
+			property :created_on, 		DateTime
+
+		end #/<%= name %>
+	end #/Models
+end #/<%= app %>

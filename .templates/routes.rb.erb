@@ -1,0 +1,10 @@
+require 'Rack'
+
+module <%= app %>
+	module Routes
+		class <%= name %> < Sinatra::Application
+			get '/?' do
+			end
+		end # /<%= name %>
+	end # /Routes
+end # /<%= name %>
