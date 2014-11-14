@@ -19,7 +19,7 @@ Dir[File.dirname(__FILE__) + '/models/*.rb'].each {|file| require file}
 # Config 
 
 
-module APP_NAME
+module <%= app_name %>
   class App < Sinatra::Base  
     set :root,        File.dirname(__FILE__)
     set :environment, ENV['RACK_ENV']
@@ -64,7 +64,7 @@ module APP_NAME
       halt 404, {error: 'File not found'}.to_json
     end
   end # /App
-end # /APP_NAME
+end # /<%= app_name %>
 
 
 

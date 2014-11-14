@@ -1,6 +1,6 @@
 require 'Rack'
 
-module Task
+module <%= app_name %>
 	module Routes
 		class Index < Sinatra::Application
 			get '/?' do

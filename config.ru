@@ -8,4 +8,4 @@ use Rack::Less,
 	:source 	  => 'public/less',
 	:hosted_at	=> '/stylesheets'
 
-run Task::App
+run <%= app_name %>::App

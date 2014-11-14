@@ -1,0 +1,11 @@
+app_name: <%= name %>
+
+development:
+ db:
+  user: username
+  name: database
+
+production:
+ db:
+  user: username
+  name: database
