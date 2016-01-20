@@ -23,8 +23,9 @@ module <%= app_name %>
   class App < Sinatra::Base  
     set :environment,   ENV['RACK_ENV']
     set :root,          File.dirname(__FILE__)
-    set :static,        true
     set :public_folder, Proc.new { File.join(root, "public") }    
+
+    enable :sessions, :static, :logging
 
     settings = YAML.load(File.read('./config.yml'))
 
@@ -54,8 +55,6 @@ module <%= app_name %>
     DataMapper.finalize
     DataMapper.auto_upgrade!
 
-    enable :sessions
-  
     register Sinatra::Namespace
 
     use Rack::Deflater
