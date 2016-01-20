@@ -21,8 +21,10 @@ Dir[File.dirname(__FILE__) + '/models/*.rb'].each {|file| require file}
 
 module <%= app_name %>
   class App < Sinatra::Base  
-    set :root,        File.dirname(__FILE__)
-    set :environment, ENV['RACK_ENV']
+    set :environment,   ENV['RACK_ENV']
+    set :root,          File.dirname(__FILE__)
+    set :static,        true
+    set :public_folder, Proc.new { File.join(root, "public") }    
 
     settings = YAML.load(File.read('./config.yml'))
 
