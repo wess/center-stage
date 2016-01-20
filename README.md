@@ -1,5 +1,2 @@
-# center-stage
-My sinatra base setup.
-
-# Script
-https://gist.github.com/wess/ce8b47bd257f157cb52a
+# Centerstage
+This is the skeleton project for the Centerstage gem. The Centerstage's project is located at: http://github.com/wess/centerstage.
